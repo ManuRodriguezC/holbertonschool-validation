@@ -1,5 +1,5 @@
 baseURL = ""
 languageCode = "en-us"
 title = "Awesome Inc."
-theme = "ananke"
+themes = "ananke"
 publishDir = "dist"
