@@ -1,5 +1,5 @@
 build: ## Created a new site
-	hugo -s . -d dist/
+	hugo
 
 clean: ## Delete all files dist
 	rm -rf dist/*
