@@ -17,10 +17,4 @@ jobs:
         run: cd module3_task1 && sudo ./setup.sh
 
       - name: build
-        run: |
-          cd module3_task1
-          make help
-          make build
-          make POST_NAME=who-are-we POST_TILTE="who are we" post
-          make clean
-  
+        run: cd module3_task1 && make build
