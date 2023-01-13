@@ -18,6 +18,7 @@ Build static HTML website from Markdown code using Go-Hugo
 
 * Shell terminal basics, using command lines:
     <div>
+
     * Navigating in a Unix file-system
 
     * Understanding how stdin/stdout redirection and piping
@@ -32,6 +33,7 @@ Build static HTML website from Markdown code using Go-Hugo
     </div>
 * Git with the command line (and also a graphical interface)
     <div>
+
     * Retrieving or creating a repository
 
     * Manipulating changes locally with Git’s 3 steps process (workspace, staging, history)
@@ -40,6 +42,7 @@ Build static HTML website from Markdown code using Go-Hugo
     </div>
 * Make/Makefile usage:
     <div>
+    
     * Executing tasks through make targets
 
     * Default target and PHONY target
