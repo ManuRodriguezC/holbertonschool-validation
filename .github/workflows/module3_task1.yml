@@ -1,0 +1,22 @@
+name: module3_task1
+
+on:
+  push:
+    branches:
+      - main
+    shedule:
+      - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-18-04
+    steps:
+      - name: cloning
+        uses: actions/checkout@v3
+
+      - name: set_up
+        run: cd module3_task1 && sudo ./setup.sh
+
+      - name: build
+        run: cd module3_task1 && make build
+
