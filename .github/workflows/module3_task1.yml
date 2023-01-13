@@ -7,7 +7,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  module3_task1:
+  build:
     runs-on: ubuntu-18.04
     steps:
       - name: cloning
