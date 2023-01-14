@@ -11,5 +11,9 @@ post: ## Created a new post and update a title of the content
 help: ## Print all commands of the makefile
 	cat Makefile | grep '##' | tr -d '##' | head -n -1
 
-package: ## 
+package: ## It should create a file named awesome-website.zip (not committed and deleted by make clean).
 	zip awesome-website.zip dist/
+
+lint: ## should be updated to lint the files README.md and DEPLOY.md with markdownlint command line
+	markdownlint README.md
+	markdownlint DEPLOY.md
