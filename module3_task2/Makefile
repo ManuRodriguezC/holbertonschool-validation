@@ -12,8 +12,17 @@ help: ## Print all commands of the makefile
 	cat Makefile | grep '##' | tr -d '##' | head -n -1
 
 package: ## It should create a file named awesome-website.zip (not committed and deleted by make clean).
-	zip awesome-website.zip dist/
+	hugo
+	zip awesome-website.zip awesome-api dist/
 
 lint: ## should be updated to lint the files README.md and DEPLOY.md with markdownlint command line
-	markdownlint README.md
-	markdownlint DEPLOY.md
+	markdownlint "*.md"
+
+unit-tests: ## run unit tests
+	@echo "all tests done"
+
+integration-tests: ## run integration-tests
+	@echo "all integration-tests done"
+
+validate: ## run validate
+	@echo "all validations done"

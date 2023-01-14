@@ -1,1 +1,35 @@
 name: module3_task2
+
+on:
+  push:
+
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  package:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: cloning
+        uses: actions/checkout@v2
+
+      - name: set_up
+        run: cd module3_task2 && sudo ./setup.sh
+
+      - name: build
+        run: cd module3_task2 && make build
+
+      - name: run unit-tests
+        run: cd module3_task2 && make unit-tests
+
+      - name: run integration-tests
+        run: cd module3_task2 && make integration-tests
+
+      - name: run validate
+        run: cd module3_task2 && make validate
+
+      - name: lint
+        run: cd module3_task2 && npm install -g markdownlint-cli && make lint
+
+      - name: package
+        run: cd module3_task2 && make package
