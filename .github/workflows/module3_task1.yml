@@ -1,3 +1,4 @@
+---
 name: module3_task1
 
 on:
@@ -11,10 +12,10 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: cloning
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: set_up
         run: cd module3_task1 && sudo ./setup.sh
 
       - name: build
-        run: cd module3_task1 && make build
+        run: cd module3_task1 && make 
