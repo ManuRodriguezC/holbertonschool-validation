@@ -60,9 +60,6 @@ jobs:
             module4_task0/awesome-website.zip
             module4_task0/DEPLOY.md
 
-      - name: create release
-        run: gh release create v1.0.1 --title "1.0.1"
-
       - name: release drafter
         uses: release-drafter/release-drafter@v5
 
