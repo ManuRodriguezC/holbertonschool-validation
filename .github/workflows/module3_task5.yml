@@ -1,0 +1,84 @@
+---
+env:
+  GH_TOKEN: ${{ github.token }}
+name: module3_task5
+on:
+  push:
+    tags: "1.0.1"
+    branches:
+      - main
+  schedule:
+    - cron: '0 12 * * *'
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: write
+
+jobs:
+  module3_task5:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: install hugo
+        run: |
+          cd module3_task5/
+          sudo ./setup.sh
+      - name: install markdownlint
+        run: npm install -g markdownlint-cli
+
+      - name: ejecute build
+        run: |
+          cd module3_task5/
+          make build
+          make clean
+      - name: ejecute makefile
+        run: |
+          cd module3_task5/
+          make lint
+          make help
+          make package
+          make POST_NAME=who-are-we POST_TILTE="who are we" post
+          make clean
+      - name: ejecute the tests
+        run: |
+          cd module3_task5/
+          make unit-tests
+      - name: ejecute integration tests
+        run: |
+          cd module3_task5/
+          make integration-tests
+      - name: ejecute validate
+        run: |
+          cd module3_task5/
+          make validate
+      - name: release files
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/1.0.1')
+        with:
+          tag_name: 1.0.1
+          files: |
+            module3_task5/awesome-website.zip
+            module3_task5/DEPLOY.md
+      - name: create release
+        run: gh release create v1.0.1 --title "1.0.1"
+
+      - name: release drafter
+        uses: release-drafter/release-drafter@v5
+
+      - name: netlify
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: './module3_task5/dist'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: '🚀 Deployed on'
+          publish-message: '🎉 Published on'
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
