@@ -21,7 +21,7 @@ lint: ## Check markdown files and flag style issues.
 	markdownlint DEPLOY.md
 
 unit-tests: ## run unit tests
-	tocuh coverage-units.out
+	touch coverage-units.out
 
 integration-tests: ## run integration-tests
 	touch coverage-integration.out
