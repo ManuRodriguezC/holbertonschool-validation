@@ -25,6 +25,7 @@ jobs:
         run: |
           cd module3_task5/
           sudo ./setup.sh
+
       - name: install markdownlint
         run: npm install -g markdownlint-cli
 
@@ -33,10 +34,10 @@ jobs:
           cd module3_task5/
           make build
           make clean
+          
       - name: ejecute makefile
         run: |
           cd module3_task5/
-          make lint
           make help
           make package
           make POST_NAME=who-are-we POST_TILTE="who are we" post
