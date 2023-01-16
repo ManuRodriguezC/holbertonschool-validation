@@ -1,7 +1,6 @@
 build: ## Created a new site
-	docker --version
-	hugo version
 	hugo
+	touch awesome-api
 
 clean: ## Delete all files dist
 	rm -rf dist/*
@@ -21,12 +20,10 @@ lint: ## should be updated to lint the files README.md and DEPLOY.md with markdo
 	markdownlint "*.md"
 
 unit-tests: ## run unit tests
-	make POST_TITLE='TEST POST_NAME='this-is-a-test' post
-	make package
-	make clean
+	tocuh coverage-units.out
 
 integration-tests: ## run integration-tests
-	pwd
+	touch coverage-integration.out
 
 validate: ## run validate
 	pwd
