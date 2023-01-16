@@ -24,7 +24,7 @@ unit-tests: ## run unit tests
 	touch coverage-units.out
 
 integration-tests: ## run integration-tests
-	touch coverage-integration.out
+	touch coverage-integrations.out
 
 validate: ## run validate
 	pwd
