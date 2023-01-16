@@ -39,6 +39,7 @@ jobs:
       - name: ejecute makefile
         run: |
           cd module4_task0/
+          make lint
           make help
           make package
           make POST_NAME=who-are-we POST_TILTE="who are we" post
