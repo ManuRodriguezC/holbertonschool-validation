@@ -17,7 +17,8 @@ package: ## It should create a file named awesome-website.zip (not committed and
 	zip awesome-website.zip awesome-api dist/
 
 lint: ## should be updated to lint the files README.md and DEPLOY.md with markdownlint command line
-	markdownlint "*.md"
+	markdownlint README.md
+	markdownlint DEPLOY.md
 
 unit-tests: ## run unit tests
 	tocuh coverage-units.out
