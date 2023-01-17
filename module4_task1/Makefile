@@ -1,6 +1,5 @@
 build:  ## Create  a new site
-	hugo
-	touch awesome-api
+		hugo
 
 clean: ## Delete all files dist
 		rm -rf dist/*
