@@ -17,7 +17,8 @@ package: ## It should create a file named awesome-website.zip (not committed and
 	zip awesome-website.zip awesome-api dist/
 
 lint: ## Check markdown files and flag style issues.
-	markdownlint "*.md"
+	markdownlint README.md
+	markdownlint DEPLOY.md
 
 unit-tests: ## run unit tests
 	touch coverage-units.out
