@@ -30,5 +30,5 @@ validate: ## run validate
 
 build-docker: ## Create the image in docker
 	pwd
-	docker build -t awesome:build module4_task1/build/Dockerfile
+	docker build -t awesome:build /repo/module4_task1/build/
 
