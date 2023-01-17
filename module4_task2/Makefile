@@ -8,9 +8,6 @@ post: ## Created a new post and update a title of the content
 		hugo new ./content/posts/$(POST_NAME).md
 		sed -i 's/title: .*/title: "$(POST_TITLE)"/' ./content/posts/$(POST_NAME).md
 
-help: ## Print all commands of the makefile
-		cat Makefile | grep '##' | tr -d '##' | head -n -1
-
 package: ## It should create a file named awesome-website.zip (not committed and deleted by make clean).
 		hugo
 		zip awesome-website.zip awesome-api dist/
@@ -36,3 +33,6 @@ build-docker: ## Create the image in docker
 
 docker-tests: ## Container-structure-test
 		curl -LO https://storage.googleapis.com/container-structure-test/latest/container-structure-test-linux-amd64 && chmod +x container-structure-test-linux-amd64 && mkdir -p $HOME/bin && export PATH=$PATH:$HOME/bin && mv container-structure-test-linux-amd64 $HOME/bin/container-structure-test
+
+help: ## Print all commands of the makefile
+		cat Makefile | grep '##' | tr -d '##' | head -n -1
