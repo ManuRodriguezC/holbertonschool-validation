@@ -1,7 +1,6 @@
-.PHONY: build
-build: ## Created a new site
-		hugo
-		touch awesome-api
+build:  ## Create  a new site
+	hugo
+	touch awesome-api
 
 clean: ## Delete all files dist
 		rm -rf dist/*
