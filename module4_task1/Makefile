@@ -1,6 +1,5 @@
 .PHONY: build
 build: ## Created a new site
-		@sudo apt install ./hugo.deb
 		@hugo
 		@touch awesome-api
 
