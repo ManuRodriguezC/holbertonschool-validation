@@ -23,7 +23,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: install hugo
-        run:  make -C module4_task1 build-dependencies
+        run:  |
+          cd module4_task1
+          make build-dependencies
 
       - name: install markdownlint
         run: npm install -g markdownlint-cli
