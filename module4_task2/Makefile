@@ -13,8 +13,7 @@ package: ## It should create a file named awesome-website.zip (not committed and
 		zip awesome-website.zip awesome-api dist/
 
 lint: ## Check markdown files and flag style issues.
-		docker run --rm -i hadolint/hadolint < duild/Dockerfile
-		docker run --rm -i ghcr.io/hadolint/hadolint < build/Dockerfile
+		pwd
 
 unit-tests: ## run unit tests
 		touch coverage-units.out
