@@ -25,7 +25,7 @@ jobs:
       - name: install hugo
         run: |
           cd module4_task1/
-          sudo ./setup.sh
+          sudo apt install ./hugo.deb
 
       - name: install markdownlint
         run: npm install -g markdownlint-cli

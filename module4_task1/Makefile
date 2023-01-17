@@ -19,7 +19,12 @@ package: ## It should create a file named awesome-website.zip (not committed and
 		zip awesome-website.zip awesome-api dist/
 
 lint: ## Check markdown files and flag style issues.
-		pwd
+		@apt install curl -y
+		@curl --silent --location https://deb.nodesource.com/setup_16.x | bash -
+		@apt install nodejs -y
+		@npm install -g markdownlint-cli 1>&2
+		@markdownlint README.md
+		@markdownlint DEPLOY.md
 
 unit-tests: ## run unit tests
 		touch coverage-units.out
