@@ -29,7 +29,7 @@ build-docker: ## Create the image in docker
 		docker build -t awesome:build -f build/Dockerfile .
 
 docker-tests: ## Container-structure-test
-		curl -LO https://storage.googleapis.com/container-structure-test/latest/container-structure-test-linux-amd64 && chmod +x container-structure-test-linux-amd64 && mkdir -p $HOME/bin && export PATH=$PATH:$HOME/bin && mv container-structure-test-linux-amd64 $HOME/bin/container-structure-test
+		container-structure-test test --image awesome:build --config config.yaml
 
 help: ## Print all commands of the makefile
 		cat Makefile | grep '##' | tr -d '##' | head -n -1
