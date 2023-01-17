@@ -29,5 +29,6 @@ validate: ## run validate
 	pwd
 
 build-docker: ## Create the image in docker
+	cd build
 	docker build -t "awesome:build" . 
 
