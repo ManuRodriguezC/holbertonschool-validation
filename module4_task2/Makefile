@@ -13,7 +13,8 @@ package: ## It should create a file named awesome-website.zip (not committed and
 		zip awesome-website.zip awesome-api dist/
 
 lint: ## Check markdown files and flag style issues.
-		pwd
+		docker run --rm -i hadolint/hadolint < duild/Dockerfile
+		docker run --rm -i ghcr.io/hadolint/hadolint < build/Dockerfile
 
 unit-tests: ## run unit tests
 		touch coverage-units.out
@@ -28,7 +29,7 @@ build-docker: ## Create the image in docker
 		docker build -t awesome:build -f build/Dockerfile .
 
 docker-tests: ## Container-structure-test
-		container-structure-test test --image awesome:build --config config.yaml
+		curl -LO https://storage.googleapis.com/container-structure-test/latest/container-structure-test-linux-amd64 && chmod +x container-structure-test-linux-amd64 && mkdir -p $HOME/bin && export PATH=$PATH:$HOME/bin && mv container-structure-test-linux-amd64 $HOME/bin/container-structure-test
 
 help: ## Print all commands of the makefile
 		cat Makefile | grep '##' | tr -d '##' | head -n -1
