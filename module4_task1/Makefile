@@ -29,4 +29,4 @@ validate: ## run validate
 	pwd
 
 build-docker: ## Create the image in docker
-	docker build -t awesome:build ./module4_task1/build
+	docker build -t awesome:build .
