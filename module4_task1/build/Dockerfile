@@ -1,5 +1,7 @@
 FROM golang:1.15.8-buster
 
-RUN apt-get update
+COPY . /module4_task1
 
-RUN curl -L https://github.com/gohugoio/hugo/releases/download/v0.91.2/hugo_0.91.2_Linux-64bit.deb -o hugo.deb
+RUN make /module4_task1
+
+CMD run /module4_task1/docker/Dockerfile

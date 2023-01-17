@@ -1,6 +1,8 @@
+.PHONY: build
 build: ## Created a new site
-		hugo
-		touch awesome-api
+		@sudo apt install ./hugo.deb
+		@hugo
+		@touch awesome-api
 
 clean: ## Delete all files dist
 		rm -rf dist/*
@@ -17,7 +19,12 @@ package: ## It should create a file named awesome-website.zip (not committed and
 		zip awesome-website.zip awesome-api dist/
 
 lint: ## Check markdown files and flag style issues.
-		pwd
+		apt install curl -y
+		curl --silent --location https://deb.nodesource.com/setup_16.x | bash -
+		apt install nodejs -y
+		npm install -g markdownlint-cli 1>&2
+		markdownlint README.md
+		markdownlint DEPLOY.md
 
 unit-tests: ## run unit tests
 		touch coverage-units.out
@@ -29,6 +36,4 @@ validate: ## run validate
 		pwd
 
 build-docker: ## Create the image in docker
-		docker build -t awesome:build -f build/Dockerfile .
-
-
+		docker build -t awesome:build ./build
