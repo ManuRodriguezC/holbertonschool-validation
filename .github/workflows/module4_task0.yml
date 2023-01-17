@@ -24,7 +24,7 @@ jobs:
 
       - name: install hugo
         run: |
-          cd module3_task5/
+          cd module4_task0/
           sudo ./setup.sh
 
       - name: install markdownlint
