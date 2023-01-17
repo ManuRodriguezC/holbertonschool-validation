@@ -13,8 +13,8 @@ package: ## It should create a file named awesome-website.zip (not committed and
 		zip awesome-website.zip awesome-api dist/
 
 lint: ## Check markdown files and flag style issues.
-		sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
-		sudo chmod +x /bin/hadolint
+		wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
+		chmod +x /bin/hadolint
 		hadolint build/Dockerfile
 		hadolint --ignore DL3003 --ignore DL3006 build/Dockerfile
 		hadolint --trusted-registry my-company.com:500 build/Dockerfile
