@@ -44,3 +44,17 @@ Execute the commands make file for you help:
 * <b>post</b>: Create a new blog post whose filename and title come from the environment variables POST_TITLE and POST_NAME.
 
 * <b>help</b>: Ideally the usage should be the comment associated with each target
+
+* <b>package</b>: It should create a file named awesome-website.zip (not committed and deleted by make clean).
+
+* <b>lint</b>: Check markdown files and flag style issues and hadolint in Dockerfile
+
+* <b>unit-tests</b>: Run unit tests
+
+* <b>integration-tests</b>: Run integration-tests
+
+* <b>validate</b>: Run validate
+
+* <b>build-docker</b>: Create the images in docker
+
+* <b>docker-tests</b>: Container structure tests
