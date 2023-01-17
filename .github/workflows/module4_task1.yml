@@ -34,6 +34,11 @@ jobs:
         run: |
           cd module4_task1/
           make unit-tests
+        
+        - name: ejecute the hadolint
+        run: |
+          cd module4_task1/
+          make lint
 
       - name: ejecute integration tests
         run: |
