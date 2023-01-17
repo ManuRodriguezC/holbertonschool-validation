@@ -27,10 +27,6 @@ integration-tests: ## run integration-tests
 validate: ## run validate
 		pwd
 
-.PHONY:
 build-docker: ## Create the image in docker
-		docker build -t awesome:build ./build
+		docker build -t awesome:build -f build/Dockerfile .
 
-.PHONY:
-build-dependencies: ## Install dependencis of hugo
-		@sudo apt install ./hugo.deb
