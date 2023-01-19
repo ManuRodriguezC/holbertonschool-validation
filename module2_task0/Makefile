@@ -10,7 +10,7 @@ stop: ## Stop the application
 
 clean: ## Delete the binaty awesome-api
 		make stop
-		rm -r awesome-api.log
+		rm -r awesome.log
 		rmdir awesome-api
 
 test: ## Test the application
