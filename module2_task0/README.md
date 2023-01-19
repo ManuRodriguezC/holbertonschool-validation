@@ -6,6 +6,13 @@
 * Understand that not only “classical” code is to be tested, but also a lot of the artifacts we can generate
 * Understand how “component”-based testing for acceptance and end to end validation is to be used
 
+# Prerequisites
+
+* Same tools as previous module
+* Golang in v1.15.*
+* NPM v7+ with NodeJS v14.* (stable)
+* Python 3 with pip module
+
 # Project Life-cicle
 
 * build: Compilethe source code of the application
