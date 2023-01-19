@@ -1,5 +1,6 @@
 build: ## Compile the source code of the application
-		make lint && go build|| exit -1
+		go mod init github.com/ManuRodriguezC/awesome-api
+		make lint && go build || exit -1
 
 run: ## un the application in background by executing
 		./awesome-api >./awesome.log 2>&1 &
