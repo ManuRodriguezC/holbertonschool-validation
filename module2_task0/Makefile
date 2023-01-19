@@ -11,7 +11,7 @@ stop: ## Stop the application
 clean: ## Delete the binaty awesome-api
 		make stop
 		rm -r awesome.log
-		rmdir awesome-api
+		rm -r awesome-api
 
 test: ## Test the application
 		curl http://localhost:9999
