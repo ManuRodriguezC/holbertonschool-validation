@@ -25,4 +25,6 @@
 
 * test: You want to test it to ensure that it behaves as expected. With the application started, you may want to use the command line curl
 
+* unit-tests: Run unit tests in coverage
+
 * help: Print all target make
