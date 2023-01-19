@@ -13,7 +13,7 @@
 * NPM v7+ with NodeJS v14.* (stable)
 * Python 3 with pip module
 
-# Project Life-cicle
+# Lifecycle
 
 * build: Compilethe source code of the application
 
