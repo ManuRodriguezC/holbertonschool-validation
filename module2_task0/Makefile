@@ -9,7 +9,7 @@ stop: ## Stop the application
 		kill $(shell pgrep awesome-api)
 
 clean: ## Delete the binaty awesome-api
-		make shop
+		make stop
 		rm -r awesome-api.log
 		rmdir awesome-api
 
