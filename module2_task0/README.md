@@ -8,14 +8,14 @@
 
 # Project Life-cicle
 
-* Build: Compilethe source code of the application
+* build: Compilethe source code of the application
 
-* Run: Run the application in background
+* run: Run the application in background
 
-* Stop: Stop the application
+* stop: Stop the application
 
 * clean: Delte the files
 
-* Test: You want to test it to ensure that it behaves as expected. With the application started, you may want to use the command line curl
+* test: You want to test it to ensure that it behaves as expected. With the application started, you may want to use the command line curl
 
-* Help: Print all target make
+* help: Print all target make
