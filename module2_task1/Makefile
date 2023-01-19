@@ -9,7 +9,6 @@ stop: ## Stop the application
 		kill $(shell pgrep awesome-api)
 
 clean: ## Delete the binaty awesome-api
-		rm -r awesome.log
 		rm -r awesome-api
 		rm go.mod
 		rm go.sum
