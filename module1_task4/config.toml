@@ -2,4 +2,4 @@ baseURL = ""
 languageCode = "en-us"
 title = "Awesome Inc."
 themes = 'ananke'
-publishDir = 'dist'
+publishdir = 'dist'
