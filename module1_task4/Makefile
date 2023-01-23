@@ -2,7 +2,7 @@ build: ## Created a new site
 	hugo
 
 clean: ## Delete all files dist
-	rm -rf dist
+	rm -r dist
 
 post: ## Created a new post and update a title of the content
 	hugo new ./content/posts/$(POST_NAME).md
