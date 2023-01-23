@@ -6,9 +6,19 @@
     <description>Recent content on Awesome Inc.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 12 Jan 2023 19:22:18 -0500</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Welcome to Awesome Inc.</title>
+      <link>/posts/welcome/</link>
+      <pubDate>Thu, 12 Jan 2023 19:22:18 -0500</pubDate>
+      
+      <guid>/posts/welcome/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
