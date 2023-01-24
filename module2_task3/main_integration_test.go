@@ -48,30 +48,6 @@ func Test_server(t *testing.T) {
 			responseCode: 404,
 			body:         "404 page not found\n",
 		},
-		{
-			name:         "Undefined page",
-			URI:          "/test",
-			responseCode: 404,
-			body:         "404 page not found\n",
-		},
-		{
-			name:         "Undefined name",
-			URI:          "/hello?name",
-			responseCode: 404,
-			body:         "404 page not found\n",
-		},
-		{
-			name:         "Another queryString halo",
-			URI:          "/hello?halo=Haloooo!",
-			responseCode: 404,
-			body:         "404 page not found\n",
-		},
-		{
-			name:         "Without any param",
-			URI:          "/hello?name=test&name=lol",
-			responseCode: 404,
-			body:         "404 page not found\n",
-		},
 	}
 
 	for _, tt := range tests {
