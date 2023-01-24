@@ -25,5 +25,12 @@ lint: ## Implemented and should fail when the linter catches and error
 unit-tests: ## Test using in go tests
 		go test -v -short -coverprofile=coverage-units.out
 
+integration-tests: ## Test using integration in go tests
+		go test -v -coverprofile=coverage-integrations.out
+
+test: ## Run unit test and integration test
+		make unit-tests
+		make integration-tests
+
 help: ## Print the differents commands
 		cat Makefile | grep '##' | tr -d '##' | head -n -1
