@@ -51,11 +51,11 @@ func Test_server(t *testing.T) {
 			name:         "Another queryString halo",
 			URI:          "/hello?halo=Haloooo!",
 			responseCode: 200,
-			body:         "Hello!",
+			body:         "Hello !",
 		},
 		{
 			name:         "Witout any param",
-			URI:          "/hello?name=test$name=lol",
+			URI:          "/hello?name=test&name=lol",
 			responseCode: 200,
 			body:         "Hello lol!",
 		},
