@@ -13,7 +13,6 @@ check: ## Check web static
 	markdown-lint-check ./content/posts/*.md
 
 validate: ## Should validate the file ./dist/index.html
-	make build
 	./w3c_validator.py ./dist/index.html
 
 lint: ## Lint markdown
