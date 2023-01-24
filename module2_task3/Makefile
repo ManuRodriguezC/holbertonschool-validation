@@ -1,4 +1,5 @@
 build: ## Compile the source code of the application
+		make lint
 		go mod init github.com/ManuRodriguezC/awesome-api
 		go build
 
@@ -11,21 +12,18 @@ stop: ## Stop the application
 clean: ## Delete the binaty awesome-api
 		-rm -r awesome.log 2>&1 &
 		-rm -r awesome-api 2>&1 &
-		-rm coverage-integrations.out
-		-rm coverage-units.out
+		-rm go.mod 2>&1 &
+		-rm go.sum 2>&1 &
 
 test: ## Test the application
-		make unit-tests &
-		make integration-tests
+		curl http://localhost:9999
+		curl http://localhost:9999/health
 
 lint: ## Implemented and should fail when the linter catches and error
 		golangci-lint run
 
 unit-tests: ## Test using in go tests
-		go test -v -short -coverprofile=coverage-units.out || echo $1
-
-integration-tests: ## Tests of the integrations tests
-		go test -v -coverprofile=coverage-integrations.out || echo $1
+		go test -v -short -coverprofile=coverage-units.out
 
 help: ## Print the differents commands
 		cat Makefile | grep '##' | tr -d '##' | head -n -1

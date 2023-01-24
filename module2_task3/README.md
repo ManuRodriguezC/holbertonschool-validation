@@ -27,6 +27,4 @@
 
 * unit-tests: Run unit tests in coverage
 
-* integration-tests: Run intregrations test in coverage
-
 * help: Print all target make

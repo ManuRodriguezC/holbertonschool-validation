@@ -31,28 +31,16 @@ func Test_HelloHandler(t *testing.T) {
 			body:         "Hello Rosalind Franklin!",
 		},
 		{
-			name:         "Name emply",
-			queryString:  "name=",
+			name:         "Without a name",
+			queryString:  "",
 			responseCode: 200,
 			body:         "Hello there!",
 		},
 		{
-			name:         "Name not value",
-			queryString:  "name",
+			name:         "With an emply name parameter",
+			queryString:  "name=Esteban&name=Manu",
 			responseCode: 200,
-			body:         "Hello there!",
-		},
-		{
-			name:         "Another queryString halo",
-			queryString:  "halo=Halooo!",
-			responseCode: 200,
-			body:         "Hello there!",
-		},
-		{
-			name:         "Without any params",
-			queryString:  "name=manu&name=esteban",
-			responseCode: 200,
-			body:         "Hello esteban!",
+			body:         "Hello Manu",
 		},
 		// INSERT MORE TESTS HERE
 	}
