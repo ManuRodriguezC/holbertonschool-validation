@@ -44,3 +44,7 @@ Execute the commands make file for you help:
 * <b>post</b>: Create a new blog post whose filename and title come from the environment variables POST_TITLE and POST_NAME.
 
 * <b>help</b>: Ideally the usage should be the comment associated with each target
+
+* <b>check</b>: Check the web static with the markdownlint
+
+* <b>validate</b> Check the html code in index.html
