@@ -11,8 +11,6 @@ stop: ## Stop the application
 clean: ## Delete the binaty awesome-api
 		-rm -r awesome.log 2>&1 &
 		-rm -r awesome-api 2>&1 &
-		-rm -r go.mod
-		-rm -r go.sum
 		-rm coverage-integrations.out
 		-rm coverage-units.out
 
