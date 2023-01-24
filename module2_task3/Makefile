@@ -1,5 +1,4 @@
 build: ## Compile the source code of the application
-		make lint
 		go mod init github.com/ManuRodriguezC/awesome-api
 		go build
 
@@ -14,6 +13,8 @@ clean: ## Delete the binaty awesome-api
 		-rm -r awesome-api 2>&1 &
 		-rm go.mod 2>&1 &
 		-rm go.sum 2>&1 &
+		-rm coverage-integrations.out
+		-rm coverage-units.out
 
 lint: ## Implemented and should fail when the linter catches and error
 		golangci-lint run
