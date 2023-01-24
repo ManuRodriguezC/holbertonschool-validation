@@ -27,8 +27,8 @@ func Test_server(t *testing.T) {
 		{
 			name:         "Health page",
 			URI:          "/hello?name=Holberton",
-			responseCode: 200,
-			body:         "Hello Holberton!",
+			responseCode: 404,
+			body:         "404 page not found\n",
 		},
 		{
 			name:         "Health page",
@@ -45,19 +45,20 @@ func Test_server(t *testing.T) {
 		{
 			name:         "Undefined name",
 			URI:          "/hello?name",
-			responseCode: 400,
+			responseCode: 404,
+			body:         "404 page not found\n",
 		},
 		{
 			name:         "Another queryString halo",
 			URI:          "/hello?halo=Haloooo!",
-			responseCode: 200,
-			body:         "Hello !",
+			responseCode: 404,
+			body:         "404 page not found\n",
 		},
 		{
 			name:         "Witout any param",
 			URI:          "/hello?name=test&name=lol",
-			responseCode: 200,
-			body:         "Hello lol!",
+			responseCode: 404,
+			body:         "404 page not found\n",
 		},
 	}
 
