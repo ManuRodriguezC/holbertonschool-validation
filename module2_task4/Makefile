@@ -16,5 +16,7 @@ validate: ## Should validate the file ./dist/index.html
 	make build
 	./w3c_validator.py ./dist/index.html
 
+lint: ## Lint markdown
+
 help: ## Print all commands of the makefile
 	cat Makefile | grep '##' | tr -d '##' | head -n -1
