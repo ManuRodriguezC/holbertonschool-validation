@@ -17,7 +17,8 @@ clean: ## Delete the binaty awesome-api
 		-rm coverage-units.out
 
 test: ## Test the application
-		make unit-tests && make integration-tests
+		make unit-tests &
+		make integration-tests
 
 lint: ## Implemented and should fail when the linter catches and error
 		golangci-lint run
