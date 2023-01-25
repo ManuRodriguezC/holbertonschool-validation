@@ -37,14 +37,30 @@
 
 Execute the commands make file for you help:
 
-* <b>build</b>: Generate the website from the markdown and configuration files in the directory dist/.
+* <b>build</b>: Generate the website and API.
 
-* <b>clean</b>: Cleanup the content of the directory dist/
+* <b>clean</b>: Cleanup the content of the directory dist/ and APIS.
 
 * <b>post</b>: Create a new blog post whose filename and title come from the environment variables POST_TITLE and POST_NAME.
 
-* <b>help</b>: Ideally the usage should be the comment associated with each target
+* <b>help</b>: Ideally the usage should be the comment associated with each target.
 
-* <b>check</b>: Check the web static with the markdownlint
+* <b>check</b>: Check the web static with the markdownlint.
 
-* <b>validate</b> Check the html code in index.html
+* <b>validate</b>: Check the html code in index.html.
+
+* <b>build-hugo</b>: Check an create the web site.
+
+* <b>build-go</b>: Compile the source code of the application.
+
+* <b>run</b>: Run the application in background by executing.
+
+* <b>stop</b>: Stop the application.
+
+* <b>lint</b>: Lint markdown.
+
+* <b>unit-tests</b>: Test using in go tests.
+
+* <b>Integration-tests</b>ntegration-tests: Test using integration in go tests.
+
+* <b>test</b>: Run unit test and integration test
