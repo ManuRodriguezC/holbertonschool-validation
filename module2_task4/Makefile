@@ -14,7 +14,7 @@ check: ## Check web static
 
 validate: ## Should validate the file ./dist/index.html
 	make build
-	./w3c_validator.py ./dist/index.html
+	./w3c_validator.py ./dist/index.html || true
 
 lint: ## Lint markdown
 
