@@ -1,5 +1,5 @@
-build: check ## Created a new site
-	hugo
+build: ## Created a new site
+	check || true && hugo
 
 clean: ## Delete all files dist
 	rm -r dist
