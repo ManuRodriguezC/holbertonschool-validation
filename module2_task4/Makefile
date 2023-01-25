@@ -1,8 +1,9 @@
 clean: ## Delete all files dist
 	rm -r dist
 
-build: check ## Check an create the web site
-	@hugo
+build: ## Check an create the web site
+	make check
+	hugo
 
 post: ## Created a new post and update a title of the content
 	hugo new ./content/posts/$(POST_NAME).md
