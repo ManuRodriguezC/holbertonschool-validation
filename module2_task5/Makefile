@@ -46,7 +46,8 @@ integration-tests: ## Test using integration in go tests
 
 test: ## Run unit test and integration test
 		-make build
-		make unit-tests & make integration-tests
+		make unit-tests
+		make integration-tests
 
 help: ## Print all commands of the makefile
 	cat Makefile | grep '##' | tr -d '##' | head -n -1
