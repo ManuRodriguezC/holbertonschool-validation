@@ -1,8 +1,8 @@
-build: ## Created a new site
-	check || true && hugo
-
 clean: ## Delete all files dist
 	rm -r dist
+
+build: check ## Check an create the web site
+	@hugo
 
 post: ## Created a new post and update a title of the content
 	hugo new ./content/posts/$(POST_NAME).md
