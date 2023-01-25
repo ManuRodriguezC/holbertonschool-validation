@@ -5,7 +5,7 @@ clean: ## Delete all files dist and API
 		-rm coverage-integrations.out
 		-rm coverage-units.out
 
-build: # Created web and API
+build: ## Created web and API
 		make build-go
 		make build-hugo
 
