@@ -10,7 +10,7 @@ post: ## Created a new post and update a title of the content
 
 check: ## Check web static
 	markdownlint ./content/posts/*.md
-	markdown-lint-check ./content/posts/*.md
+	markdown-link-check ./content/posts/*.md
 
 validate: ## Should validate the file ./dist/index.html
 	make build
