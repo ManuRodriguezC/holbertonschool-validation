@@ -1,4 +1,4 @@
-build: ## Created a new site
+build: check ## Created a new site
 	hugo
 
 clean: ## Delete all files dist
