@@ -61,6 +61,6 @@ Execute the commands make file for you help:
 
 * <b>unit-tests</b>: Test using in go tests.
 
-* <b>Integration-tests</b>ntegration-tests: Test using integration in go tests.
+* <b>integration-tests</b>ntegration-tests: Test using integration in go tests.
 
 * <b>test</b>: Run unit test and integration test
