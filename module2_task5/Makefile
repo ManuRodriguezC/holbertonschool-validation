@@ -1,7 +1,8 @@
 clean: ## Delete all files dist and API
-		rm -r dist
-		-rm -r awesome.log 2>&1 &
-		-rm -r awesome-api 2>&1 &
+		-make stop
+		-rm -rf dist
+		-rm -rf awesome.log 2>&1 &
+		-rm -rf awesome-api 2>&1 &
 		-rm coverage-integrations.out
 		-rm coverage-units.out
 
