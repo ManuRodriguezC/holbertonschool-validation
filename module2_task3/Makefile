@@ -1,5 +1,5 @@
 build: ## Compile the source code of the application
-		go mod init github.com/ManuRodriguezC/awesome-api
+		make lint
 		go build
 
 run: ## un the application in background by executing
@@ -9,6 +9,7 @@ stop: ## Stop the application
 		kill $(shell pgrep awesome-api) 2>&1 &
 
 clean: ## Delete the binaty awesome-api
+		-make stop
 		-rm -r awesome.log 2>&1 &
 		-rm -r awesome-api 2>&1 &
 		-rm coverage-integrations.out
