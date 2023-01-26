@@ -7,15 +7,14 @@ clean: ## Delete all files dist and API
 		-rm coverage-units.out
 
 build: ## Created web and API
-		make build-go
-		make build-hugo
+		make go-build
+		make hugo-build
 
-build-hugo : check ## Check an create the web site
+hugo-build : check ## Check an create the web site
 		hugo
 
-build-go: ## 
+go-build: ## 
 		go mod init github.com/ManuRodriguezC/awesome-api
-		go get github.com/gorilla/mux
 		go build
 
 post: ## Created a new post and update a title of the content
