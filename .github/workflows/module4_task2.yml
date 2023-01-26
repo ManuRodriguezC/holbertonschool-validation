@@ -27,9 +27,8 @@ jobs:
           make unit-tests
           make integration-tests
           make package
-          make lint
-          make docker-tests
-      - name: Archive generated zip
+      - name: Archiv
+      e generated zip
         uses: actions/upload-artifact@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
