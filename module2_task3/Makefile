@@ -1,4 +1,5 @@
 build: ## Compile the source code of the application
+		go mod init github.com/ManuRodriguezC/awesome-api
 		make lint
 		go build
 
