@@ -37,10 +37,20 @@
 
 Execute the commands make file for you help:
 
-* <b>build</b>: Generate the website from the markdown and configuration files in the directory dist/.
-
-* <b>clean</b>: Cleanup the content of the directory dist/
-
-* <b>post</b>: Create a new blog post whose filename and title come from the environment variables POST_TITLE and POST_NAME.
-
-* <b>help</b>: Ideally the usage should be the comment associated with each target
+go-build:  Build the API binary
+hugo-build:  Build a web site
+build:   Create  a new site
+check:  Lints and check the lint of markdown
+validate:  Validates dist/index.html using W3C Hbtn validator
+run:     Runs the built binary and send everything to awesome.log
+stop:    Terminates the execution of awesome-api
+clean:  Delete all files dist
+post:  Created a new post and update a title of the content
+package:  It should create a file named awesome-website.zip (not committed and deleted by make clean).
+lint:  Check markdown files and flag style issues.
+unit-tests:  run unit tests
+integration-tests:  run integration-tests
+test:  Tests API uses go test
+build-docker:  Create the image in docker
+docker-tests:  Test the henereted docker image using container
+help:  Print all commands of the makefile
