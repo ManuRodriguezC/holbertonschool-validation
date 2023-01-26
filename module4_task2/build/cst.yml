@@ -5,3 +5,4 @@ commandTests:
     command: "which"
     args: ["hugo"]
     expectedOutput: ["/usr/local/bin/hugo"]
+  
